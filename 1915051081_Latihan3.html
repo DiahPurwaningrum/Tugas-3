@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>External Style</title>
+<link rel="stylesheet" type="text/css" href="assets/style1.css">
+</head>
+<style>
+  body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #e6e6e6;
+    padding: 0;
+    margin:15px;
+    
+}
+.container{
+    width: 65%;
+    height: auto;
+    background: white;
+    margin:auto;
+    margin-top: 5px;
+    padding-bottom: 5px;
+}
+.logo {
+    font-size: xx-large;
+    padding: 15px 0 15px 10px;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #1a75ff;
+    border: 1px solid gainsboro;
+}
+nav li {
+    float: left;
+}
+nav li a{
+    display: inline-block;
+    color:#ffffff;
+    text-align: center;
+    padding: 14px 15px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    opacity: 0.9;
+    background-color: #3385ff;
+}
+.wrapper {
+background-color: #DCDCDC;
+float: left;
+width: 100%
+}
+.sidebar {
+width: 30%;
+float: left;
+}
+.content {
+background-color: #EEEEEE;
+width: 70%;
+float: right;
+}
+.footer {
+background-color: rgb(2, 2, 39);
+clear: both;
+text-align: center;
+padding: 15px;
+}
+</style>
+<body>
+<div class="container">
+<header class="header">
+<div class="logo">
+<img src="logoundiksha.png" width="100">
+</div>
+<nav class="nav">
+    <h1>
+        Selamat Datang
+        </h1>
+        <ul>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#logout">Logout</a></li>
+            </ul>
+            </nav>
+        </header>
+        <div class="wrapper">
+        <aside class="sidebar">
+        <div style="padding: 10px;">
+        <b>Menu</b><br>
+        <hr>
+        <a href="#">Home</a><br />
+        <a href="#">Biodata</a><br />
+        <a href="#">Update Biodata</a><br />
+        <a href="#">Contact</a><br />
+        </div>
+        </aside>
+        <main class="content">
+        <div style="padding: 10px;">
+        <h2 style="margin: 0px;">Update Biodata Mahasiswa</h2>
+        <hr/>
+        <form action=" formulir.php" method="post" onSubmit="return ValidasiForm()" name="Fo
+        rmReg">
+        <table>
+        <tr>
+        <td>Nama</td>
+        <td>:</td>
+
+<td><input type="text" name="nama" value="" placeholder="Tulisakan Nama
+Anda" /><br/>
+<small style="color: red" id="err_nama"></small>
+</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>:</td>
+<td> <input type="password" name="password" placeholder="Tulisakan Passw
+
+ord Anda" /><br/>
+<small style="color: red" id="err_password"></small>
+</td>
+</tr>
+<tr>
+<td>Jenis Kelamin</td>
+<td>:</td>
+<td><input type="radio" name="jenis_kelamin" value="laki-
+laki" checked /> Laki - Laki
+
+<input type="radio" name="jenis_kelamin" value="perempuan" /> Perempuan
+<br/>
+<small style="color: red" id="err_jenis_kelamin"></small>
+</td>
+</tr>
+<tr>
+    <tr>
+        <td>Tanggal Lahir</td>
+    <td>:</td>
+    <td>
+        <input type="date" name="tanggal" />
+    </td>
+    </tr>
+    <tr>
+    <td>Umur</td>
+    <td>:</td>
+    <td>
+    <input type="number" min="10" max="90" name="umur" />
+    </td>
+    </tr>
+    <tr>
+        <td>Agama</td>
+        <td>:</td>
+        <td>
+    <select name="agama">
+        <option value="islam">Islam</option>
+        <option value="kristen">Kristen</option>
+        <option value="hindu">Hindu</option>
+        <option value="budha">Budha</option>
+    </select>
+    </td>
+    </tr>
+<tr>
+<td>Hobi</td>
+<td>:</td>
+<td><input type="checkbox" name="hobi" value="Membaca" /> Membaca Buku
+
+<!--Gunakan atribut checked untuk memilih checkbox-->
+
+CSS
+
+36 Pemrograman Web Dasar
+<input type="checkbox" name="hobi" value="Menulis" checked /> Menuli
+s
+<input type="checkbox" name="hobi" value="Memancing" /> Memancing
+<br/>
+
+<small style="color: red" id="err_hobi"></small>
+
+</td>
+</tr>
+<tr>
+<td>Asal Kota</td>
+<td>:</td>
+
+<td> <select name="asal_kota">
+<option value="Kota Jakarta"> Jakarta</option>
+<option>Bandung</option>
+<!--Gunakan atribut selected untuk memilih option-->
+<option value="Kota Semarang" selected>Semarang</option>
+</select><br/>
+<small style="color: red" id="err_asal_kota"></small>
+</td>
+</tr>
+<tr>
+<td>Komentar</td>
+<td>:</td>
+<td><textarea name="komentar" rows="5" cols="20"></textarea>
+
+</td>
+</tr>
+<tr>
+<td colspan="3" align="right"><button> simpan</button> </td>
+</tr>
+</table>
+</form>
+</div>
+</main>
+</div>
+</div>
+</body>
+</html>
